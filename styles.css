@@ -7,7 +7,39 @@ body {
 
 h1 {
   font-family: "Manufacturing Consent", system-ui;
-  color: #941b0c;
+  color: #902923;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 4rem;
+  font-size: 3rem;
+}
+
+p {
+  font-family: "Crimson Pro", serif;
+  color: #d6d5c9;
+}
+
+#intro {
+  text-align: center;
+  border: 2px double #d6d5c9;
+  padding: 20px;
+  width: fit-content;
+  margin: auto;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#choose_body_part {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #d6d5c9;
+}
+
+#skeleton {
+  display: block;
+  margin: auto;
+  margin-top: 3rem;
+  width: 300px;
 }
