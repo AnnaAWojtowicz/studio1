@@ -1,0 +1,13 @@
+body {
+  background-image: url("./img/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-family: "Manufacturing Consent", system-ui;
+  color: #941b0c;
+  text-align: center;
+  margin-top: 50px;
+}
