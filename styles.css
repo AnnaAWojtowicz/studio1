@@ -10,7 +10,7 @@ h1 {
   color: #902923;
   text-align: center;
   margin-top: 4rem;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 p {
@@ -31,10 +31,32 @@ p {
 }
 
 #choose_body_part {
+  font-family: "Manufacturing Consent", system-ui;
   text-align: center;
   margin-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #d6d5c9;
+}
+
+#body_parts_container {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.side_column {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.middle_column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #skeleton {
@@ -42,4 +64,81 @@ p {
   margin: auto;
   margin-top: 3rem;
   width: 300px;
+}
+
+.circle_container {
+  width: 60px;
+  height: 60px;
+  background: #d6d5c9;
+  border: 5px double #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#brain {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+#ear {
+  width: 35px;
+  height: 50px;
+}
+
+#eye {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+#guts {
+  width: 70px;
+  height: 60px;
+  margin-left: 0.5rem;
+  object-fit: cover;
+}
+
+#heart {
+  width: 80px;
+  height: 60px;
+  margin-left: 1rem;
+  object-fit: cover;
+}
+
+#hips {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+#kidney {
+  width: 35px;
+  height: 50px;
+  object-fit: cover;
+}
+
+#skull {
+  width: 35px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+}
+
+#jaw {
+  width: 35px;
+  height: 35px;
+}
+
+#torso {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+}
+#liver {
+  width: 50px;
+  height: 50px;
 }
