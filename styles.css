@@ -143,6 +143,7 @@ p {
   color: #d6d5c9;
 }
 
+/* item.html */
 #item_container {
   margin: 0 auto;
   display: grid;
@@ -194,4 +195,15 @@ button,
   border: 5px double #333;
   cursor: pointer;
   text-decoration: none;
+}
+
+/* shopping cart */
+
+h2 {
+  font-family: "Crimson Pro", serif;
+  color: #d6d5c9;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
 }
