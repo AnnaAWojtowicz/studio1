@@ -11,7 +11,7 @@ h1 {
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 4rem;
-  font-size: 4rem;
+  font-size: 8rem;
 }
 
 p {
@@ -34,8 +34,9 @@ p {
 #choose_body_part {
   font-family: "Manufacturing Consent", system-ui;
   text-align: center;
-  margin-top: 2rem;
-  font-size: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  font-size: 4rem;
   color: #d6d5c9;
 }
 
@@ -50,7 +51,7 @@ p {
 
 .side_column {
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
 }
@@ -71,6 +72,18 @@ p {
 .circle_container {
   width: 100px;
   height: 100px;
+  background: #d6d5c9;
+  border: 5px double #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.circle_container2 {
+  width: 400px;
+  height: 400px;
   background: #d6d5c9;
   border: 5px double #333;
   border-radius: 50%;
@@ -127,7 +140,12 @@ p {
   width: 55px;
   height: 70px;
   margin-bottom: 0.5rem;
-  object-fit: cover;
+}
+
+#skull2 {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 1.5rem;
 }
 
 #jaw {
@@ -147,4 +165,28 @@ p {
   margin-bottom: 2rem;
   font-family: "Crimson Pro", serif;
   color: #d6d5c9;
+}
+
+#item_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.item_container_column1 {
+  justify-self: stretch;
+  align-self: stretch;
+}
+
+.item_container_column2 {
+}
+
+#item_text {
+  font-size: 2rem;
+}
+
+button {
 }
