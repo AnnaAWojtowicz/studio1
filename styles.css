@@ -123,12 +123,6 @@ p {
   margin-bottom: 0.5rem;
 }
 
-.skull2 {
-  width: 200px;
-  height: 300px;
-  margin-bottom: 1.5rem;
-}
-
 #jaw {
   width: 55px;
   height: 55px;
@@ -167,6 +161,18 @@ p {
 }
 
 .item_container_column2 {
+}
+
+.item_big_image1 {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 1.5rem;
+}
+
+.item_big_image2 {
+  width: 270px;
+  height: 270px;
+  margin-bottom: 1.5rem;
 }
 
 #item_text {
