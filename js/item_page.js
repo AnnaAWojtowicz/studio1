@@ -19,3 +19,17 @@ if (item) {
     const price = document.getElementById("item_price");
     price.textContent = `$${item.price}`;
 }
+
+const addButton = document.getElementById("add_to_cart");
+
+if (item && addButton) {
+    addButton.dataset.id = item.id;
+
+    addButton.addEventListener("click", () => {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(item);
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+    });
+}

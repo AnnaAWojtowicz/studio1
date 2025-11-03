@@ -15,59 +15,50 @@
 
 <body>
     <h1>Your coffin:</h1>
-    <div class="coffin_container">
+    <div class="cart_container">
         <div>
-            <div id="coffin_items">
-                <div class="coffin_item">
-                    <div class="circle_container"><img src="./img/ear.png" alt="ear" class="body_part" id="ear" /></div>
-                    <div class="price">$20</div>
-                </div>
-                <div class="coffin_item">
-                    <div class="circle_container"><img src="./img/ear.png" alt="ear" class="body_part" id="ear" /></div>
-                    <div class="price">$20</div>
-                </div>
-                <div class="coffin_item">
-                    <div class="circle_container"><img src="./img/ear.png" alt="ear" class="body_part" id="ear" /></div>
-                    <div class="price">$20</div>
-                </div>
+            <div id="cart_items">
+                <div class="cart_item"></div>
             </div>
             <div>
                 <h2 id="total">Total: $XX.XX</h2>
             </div>
+            <div id="details_shipping_payment">
+                <section id="details_shipping">
+                    <h2>Shipping details</h2>
+                    <form>
+                        <label for="name">Full name:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required><br><br>
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" required><br><br>
+                        <label for="zip">ZIP code:</label>
+                        <input type="text" id="zip" name="zip" required><br><br>
+                    </form>
+                </section>
+
+                <section id="details_payment">
+                    <h2>Payment details</h2>
+                    <form>
+                        <label for="name">Name on card:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="cardnumber">Card number:</label>
+                        <input type="text" id="cardnumber" name="cardnumber" required><br><br>
+                        <label for="expiry">Expiry date:</label>
+                        <input type="text" id="expiry" name="expiry" required><br><br>
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" required><br><br>
+                    </form>
+
+                </section>
+
+            </div>
+            <div id="pay_button"><a href="index.html" id="button">Pay… if You Dare</a></div>
         </div>
-        <div id="details_shipping_payment">
-            <section id="details_shipping">
-                <h2>Shipping details</h2>
-                <form>
-                    <label for="name">Full name:</label>
-                    <input type="text" id="name" name="name" required><br><br>
-                    <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" required><br><br>
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city" required><br><br>
-                    <label for="zip">ZIP code:</label>
-                    <input type="text" id="zip" name="zip" required><br><br>
-                </form>
-            </section>
-
-            <section id="details_payment">
-                <h2>Payment details</h2>
-                <form>
-                    <label for="name">Name on card:</label>
-                    <input type="text" id="name" name="name" required><br><br>
-                    <label for="cardnumber">Card number:</label>
-                    <input type="text" id="cardnumber" name="cardnumber" required><br><br>
-                    <label for="expiry">Expiry date:</label>
-                    <input type="text" id="expiry" name="expiry" required><br><br>
-                    <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" name="cvv" required><br><br>
-                </form>
-
-            </section>
-
-        </div>
-        <div id="pay_button"><a href="index.html" id="button">Pay… if You Dare</a></div>
-    </div>
 </body>
+<script src="js/items.js"></script>
+<script src="js/item_page.js"></script>
+<script src="js/cart_page.js"></script>
 
 </html>
