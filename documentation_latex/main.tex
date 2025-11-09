@@ -1,0 +1,159 @@
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{float}
+\restylefloat{figure}
+
+
+\title{Report Studio 1 - Web Server and LaTeX Exercise}
+\author{Anna A. Wojtowicz}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+
+This report documents the tasks described in \textit{Studio 1 Tutorial 4 - Web Server and \LaTeX Exercise} (Noroff, 2025). 
+The first part of the report explains how access to the virtual machine (VM) was obtained, followed by a section describing the installation of the Apache web server on an Ubuntu system. Finally, the report outlines the implementation and deployment of the website itself.
+
+\section{Accessing the VM and using the Ubuntu server} 
+
+Because the author of this report uses macOS, installing the required VMWare Workstation posed certain challenges. The equivalent of VMware Workstation Pro software for macOS is VMwareFusion (or VMware Fusion Pro for the advanced version). Accessing it required accepting unclear terms and conditions. Once access was granted, the installation proceeded smoothly, although it took a considerable amount of time. 
+The next step was to download the provided Ubuntu Server 20.04 from One Drive, as shared by the lecturer in the previously mentioned tutorial document. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 13.49.13.png}
+    \caption{Screenshot of the Ubuntu Server file provided by the lecturer.}
+    \label{fig:ubuntu}
+\end{figure}
+
+After unzipping the folder, the student opened the  \textit{StudioWebServer.vmx} file and entered the username and password as instructed in the provided tutorial. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 13.48.25.png}
+    \caption{Screenshot of Ubuntu Server files.}
+    \label{fig: ubuntu_files}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 14.06.00.png}
+    \caption{Screenshot of login process to Ubuntu system.}
+    \label{fig:login}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 14.06.23.png}
+    \caption{Screenshot of Ubuntu Server start page.}
+    \label{fig:ubuntu_start_page}
+\end{figure}
+
+
+\section{Installation of the Apache web server on the Ubuntu system}
+
+The next step involved installing the Apache web server on the Ubuntu system. To begin, the student verified their current directory using the command \texttt{pwd}. The output \texttt{/home/webdev}, confirmed the correct working directory. 
+The local package index was then updated using the command \texttt{sudo apt update}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 14.35.22.png}
+    \caption{Screenshot of checking the directory and updating apt package.}
+    \label{fig: directory}
+\end{figure}
+
+Apache was installed by executing  \texttt{sudo apt install apache2 -y}, and its installation was verified with the command \texttt{apache2 -v}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 15.06.45.png}
+    \caption{Screenshot of installation Apache and checking if it was installed correctly}
+    \label{fig:apache}
+\end{figure}
+
+Next, Apache was enabled to start automatically at boot by running \texttt{sudo systemctl enable apache2} followed by\\ \texttt{sudo\allowbreak\ systemctl\allowbreak\ status\allowbreak\ apache2} to confirm that it was active. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 15.21.16.png}
+    \caption{Screenshot showing how to automatically start Apache and checking its status}
+    \label{fig:apache_automatic_start}
+\end{figure}
+
+Finally, the command \texttt{ifconfig} was used to identify the IP address, which could then be entered in a browser to verify that Apache was running correctly.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 15.42.15.png}
+    \caption{Screenshot showing how to check IP address}
+    \label{fig:ip_address}
+\end{figure}
+
+\section{Website - A Little Gruesome}
+The final part of the task involved creating and uploading the website. The student developed the project in \textit{VisualStudioCode} and stored the repository on \textit{GitHub} (Wojtowicz, 2025). 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 15.27.45.png}
+    \caption{Screenshot showing website code in Visual Studio Code}
+    \label{fig:visual_studio_code}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 15.29.49.png}
+    \caption{Screenshot showing the website repository in GitHub}
+    \label{fig:github}
+\end{figure}
+
+The website, titled \textit{A Little Gruesome}, was designed for a fictional company selling fake body parts. This limited project imitates an online store where users can browse and add items to their shopping basket. The site consists of three \textit{HTML} pages, supported by a simple \textit{CSS} stylesheet file for styling and a few \textit{JavaScript} files that provide dynamic and interactive elements to the site. All textual content on the website was generated with the help of \textit{ChatGPT}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 16.25.53.png}
+    \caption{Screenshot of one of the pages of A Little Gruesome}
+    \label{fig:one_of_the_webpages}
+\end{figure}
+
+
+To host the website, the student navigated to the directory \textit{/var/www/html} using the command \texttt{sudo cd /var/www/html}.
+Next, \textit{wget} was installed with \texttt{sudo apt install wget -y}, allowing the student to upload the zipped project file using \texttt{wget studio1-main.zip}.
+After installing \textit{unzip} with \texttt{sudo apt install unzip}, the project was extracted using \texttt{unzip studio1-main.zip}.
+All files were then moved to the current directory with \texttt{sudo mv studio1-main/* .} to ensure that \textit{index.html} appeared as the landing page.
+The remaining folder was deleted with \texttt{sudo rm –R studio1-main} to keep the directory organized.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 16.44.56.png}
+    \caption{Screenshot showing the current structure of var/www/html}
+    \label{fig:current_structure}
+\end{figure}
+
+Finally, upon refreshing the browser the website was successfully displayed and operated as intended.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Screenshot 2025-11-06 at 17.02.52.png}
+    \caption{Screenshot showing the website hosted by Apache server on Ubuntu system}
+    \label{fig:hosted_website}
+\end{figure}
+
+\section{Conclusion}
+This report has documented the process of obtaining access to a virtual machine (VM), installing Ubuntu and the Apache web server and deploying a fictional website titled \textit{A little gruesome}. The report also demonstrated how the website was uploaded and made accessible through the browser. 
+
+\section{References}
+%\begin{references}
+\reference {Noroff. (2025). \textit{Tutorial 4 - Web server and Latex, Studio 1} [PDF]. \url{https://learning.noroff.no/pluginfile.php/62611/mod_resource/content/7/UC1ST1104___Activity_4__Documenting_server_setup_using_LaTeX-1.pdf}}
+
+\reference {Wojtowicz, A.A. (2025). \textit{Studio1} [Source code]. \url{https://github.com/AnnaAWojtowicz/studio1}}
+%\end{references}
+
+
+\end{document}
